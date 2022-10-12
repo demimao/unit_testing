@@ -41,7 +41,7 @@ Sunday Oct 16, 2022
 - QA/Agile: Demi, Alex
 ---
 ### Diagram 
-![Assigned-Roles](group-roles.jpg)
+![Assigned-Roles](diagram-sc/group-roles.jpg)
 
 
 
