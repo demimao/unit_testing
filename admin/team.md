@@ -50,3 +50,12 @@ I'm a Third-year transfer computer engineering major at UC San Diego. Some of my
 
 ---
 
+<img src="photos/Demi.jpeg" align="left" width="150" height="200">
+
+**Demi Mao** - *Agile Developer*
+
+Socials: [Github](https://github.com/demimao) / [LinkedIn](https://www.linkedin.com/in/demi-mao-823208218/)
+
+I'm a third-year math-cs major at UC San Diego. I love watching fantasy movies, chilling out by the sea and exploring new restaurants. I'm one of the agile devs for the team and I look forward to working collaboratively with designer, front-end and back-end devs. I'm an officer at the UCSD Chinese Engineering Society, holding events such as intern mixer and data mining competition. Next quarter, I might work as a math contents tutor at the Teaching + Learning Commons at Geisel.
+
+---
