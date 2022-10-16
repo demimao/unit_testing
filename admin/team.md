@@ -44,7 +44,7 @@ Socials: [Github](https://github.com/sjin799) / [LinkedIn](https://www.linkedin.
 
 **Alex Hernandez Perez** - *Agile Developer*
 
-Socials: [Github](https://github.com/anh010) / [LinkedIn](www.linkedin.com/in/alex-hernandez-perez-843371253/)
+Socials: [Github](https://github.com/anh010) / [LinkedIn](https://www.linkedin.com/in/alex-hernandez-perez-843371253/)
 
 I'm a Third-year transfer computer engineering major at UC San Diego. Some of my hobbies include reading manga, playing video games and practicing karate. Im one of the Agile devs for this team since Ive front and back end experience, which includes working with databases, and handling user data. This quarter I'm volunteeering with the ECE outreach to design and teach the fundamentals of electrical and computer engineering to K-12 students in socioeconomically disadvantaged areas around San Diego.
 
