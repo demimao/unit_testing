@@ -29,3 +29,13 @@ I'm a third-year computer engineering major at UC San Diego. I love listening to
 
 ---
 
+<img src="photos/Goldie.jpeg" align="left" width="" height="200">
+
+**Goldie (Shengqiu) Jin** - *Designer*
+
+Socials: [Github](https://github.com/sjin799) / [LinkedIn](https://www.linkedin.com/in/shengqiujin/)
+
+ I'm a third-year computer engineering major at UC San Diego. I love to draw and watch movies and animes. I have hold 2 graphic design positions for different student organizations. I am experience in Figma and Canva for illustration/UI design and. I will be doing a software engineering co-op with Collins Aerospace for next winter and spring to develope new feature on estimating landing distance on airplane. 
+
+---
+
