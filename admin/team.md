@@ -17,4 +17,15 @@ Our goal is to promote a fostering and encouraging atmosphere in our team in an 
 - 00000100 - Openness
   - Failures aren't hidden and roadblocks are actively shared to leverage knowledge from the rest of the team members. 
 
-## The Team
+## Meet the Bits
+
+<img src="photos/Krish.jpg" align="left" width="250" height="250">
+
+**Krish Dandiwala** - *Team Lead*
+
+Socials: [Github](https://github.com/kdandiwala) / [LinkedIn](https://www.linkedin.com/in/krish-dandiwala/)
+
+I'm a third-year computer engineering major at UC San Diego. I love listening to alternative/R&B music, playing recreational basketball, and being a big fan of the Golden State Warriors! I've interned at Nebulon Inc. as a software engineer and Cogitativo Inc. as a data engineer. At Nebulon, I implemented error-logging wrappers and metrics on 100+ GoLang functions that queried databases in the cloud. At Cogitativo, I developed an end-to-end ETL data pipeline project for 20+ sensitive medical datasets using AWS services.
+
+---
+
