@@ -130,10 +130,10 @@ ___
 
 <img src="photos/Takuro.jpg" align="left" width="" height="200">
 
-**Maggie Liu** - *Back End Developer*
+**Takuro Kitazawa** - *Back End Developer*
 
 Socials: [Github](https://github.com/audreyfishy) / [LinkedIn](https://www.linkedin.com/in/takuro-kitazawa-651b45214/)
 
-I'm a forth-year computer science major at UC San Diego. I like to learn algorithms and data strucutres to win in competitive programming contests. I am a oldest son of three male brothers. I aspire to be a software engineer. My goals during college is to get into a top tech company.
+I'm a fourth-year computer science major at UC San Diego. I like to learn algorithms and data strucutres to win in competitive programming contests. I am a oldest son of three male brothers. I aspire to be a software engineer. My goals during college is to get into a top tech company.
 <br>
 <br>
