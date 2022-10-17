@@ -69,7 +69,7 @@ Socials: [Github](https://github.com/rjayanan) / [LinkedIn](https://www.linkedin
 
 ---
 
-<img src="photos/Jinwoong.jpg" align="left" width="150" height="200">
+<img src="photos/Jinwoong.jpg" align="left" width="200" height="200">
 
 **Jinwoong Huh** - *Planner*
 
