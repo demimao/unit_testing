@@ -1,4 +1,4 @@
-<h1>Introductions/Role Assignments <br /> October 11, 2022 || 9:00pm - 10:00pm
+<h1>Introductions/Role Assignments <br /> October 11, 2022 || 9:00pm - 10:00pm || Zoom
 </h1>
 
 ### Attendance 
