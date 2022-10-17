@@ -109,12 +109,14 @@ I'm a third-year computer engineering major at UC San Diego. In my spare time, I
 
 ___
 
-<img src="photos/Maggie.jpg" align="left" width="200" height="260">
+<img src="photos/Maggie.jpg" align="left" width="" height="200">
 
 **Maggie Liu** - *Front End Developer*
 
 Socials: [Github](https://github.com/maggieliu123) / [LinkedIn](www.linkedin.com/in/maggie-liu-26aa53228)
 
 I'm a third-year computer science major at UC San Diego. In my spare time, I love to take walks and spend time with family. I have two wonderful parents and a younger sister who is pursuing a doctorate degree in pharmacy. I've interned at LPL Financial and aspire to be a software engineer. My goals during college is to get more technical internships, travel abroad, and minor in business.
+<br>
+<br>
 
 ___
