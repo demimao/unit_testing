@@ -1,5 +1,10 @@
 # Team 8: The Byte
 
+<img src="/admin/branding/LOGO.png"
+     alt="Team 8 Logo"
+     width="300px"
+     height=""/>
+     
 Eight bits in a byte - the fundamental building block of every software program in existence. At the Byte, each bit in out team plays a pivotal role in working together towards the common goal of developing a CRUD app that incorporates local-first ideologies. Although we may come from different technical backgrounds, the sum of our own individual experiences culminates into something far greater than any single person could bring. The summation of our front-end, back-end, organizational, and development pattern knowledge immediately sets us up for success in our imminent software endeavor. 
 
 Check out our [team video](https://youtu.be/TWtL6K_9kgE)!
