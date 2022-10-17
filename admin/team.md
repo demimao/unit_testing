@@ -59,12 +59,12 @@ Socials: [Github](https://github.com/demimao) / [LinkedIn](https://www.linkedin.
 I'm a third-year math-cs major at UC San Diego. I love watching fantasy movies, chilling out by the sea and exploring new restaurants. I'm one of the agile devs for the team and I look forward to working collaboratively with designer, front-end and back-end devs. I'm an officer at the UCSD Chinese Engineering Society, holding events such as intern mixer and data mining competition. Next quarter, I might work as a math contents tutor at the Teaching + Learning Commons at Geisel.
 
 ---
-<img src="photos/Rishi.jpg" align="left" width="200" height="200">
+<img src="photos/Rishi.jpg" align="left" width="150" height="200">
 
 **Rishigesh Jayananth** - *Front End*
 
 Socials: [Github](https://github.com/rjayanan) / [LinkedIn](https://www.linkedin.com/in/rishigesh-jayananth-024807243/)
 
- I'm a third-year computer engineering major at UC San Diego. I love to play basketball, volleyball, and watch anime. I've interned at HPE as a system validation engineer, working on various projects such as a Front End UI project as well as automating test cases. 
+ I'm a third-year computer engineering major at UC San Diego. I love to play basketball, volleyball, and watch anime. I've interned at HPE as a system validation engineer, working on various projects such as a Front End UI project as well as automating test cases. I currently still work there part time and currently working on my KCNA certification.
 
 ---
