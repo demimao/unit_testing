@@ -68,3 +68,11 @@ Socials: [Github](https://github.com/rjayanan) / [LinkedIn](https://www.linkedin
  I'm a third-year computer engineering major at UC San Diego. I love to play basketball, volleyball, and watch anime. I've interned at HPE as a system validation engineer, working on various projects such as a Front End UI project as well as automating test cases. I currently still work there part time and currently working on my KCNA certification.
 
 ---
+
+<img src="photos/Jinwoong.jpg" align="left" width="150" height="200">
+
+**Jinwoong Huh** - *Planner*
+
+Socials: [Github](https://github.com/Jaywhuh) / [LinkedIn](https://www.linkedin.com/in/jinwoong-huh-009699197/)
+
+ I'm a third-year computer engineering major at UC San Diego. I love to watch UFC, train boxing, and read fictional books during my free time. I've served in the South Korean military as an Operation Staff for 18 months, after my second year in UC San Diego. I am the planner for this team, and I look forward to working with the team this quarter. Next quarter, I might consider joining the Korean Scientists and Engineers Association. 
