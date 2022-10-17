@@ -61,7 +61,7 @@ I'm a third-year math-cs major at UC San Diego. I love watching fantasy movies, 
 ---
 <img src="photos/Rishi.jpg" align="left" width="150" height="200">
 
-**Rishigesh Jayananth** - *Front End*
+**Rishigesh Jayananth** - *Front End Developer*
 
 Socials: [Github](https://github.com/rjayanan) / [LinkedIn](https://www.linkedin.com/in/rishigesh-jayananth-024807243/)
 
