@@ -19,7 +19,7 @@ Our goal is to promote a fostering and encouraging atmosphere in our team in an 
 
 ## Meet the Bits
 
-<img src="photos/Krish.jpg" align="left" width="250" height="250">
+<img src="photos/Krish.jpg" align="left" width="200" height="200">
 
 **Krish Dandiwala** - *Team Lead*
 
@@ -29,14 +29,15 @@ I'm a third-year computer engineering major at UC San Diego. I love listening to
 
 ---
 
-<img src="photos/BrianM.jpg" align="left" width="" height="250">
+<img src="photos/BrianM.jpg" align="left" width="" height="200">
 
 **Brian Mendez** - *Team Lead*
 
 Socials: [Github](https://github.com/b1mendez) / [LinkedIn](https://www.linkedin.com/in/brian-mendez-2530801b0/)
 
 I'm a fourth-year transfer student majoring in computer engineering major at UC San Diego. I was a tutor for over two years and recently launched an online tutoring company called Better Times Tutoring that specializes in STEM subjects from middle school to high school. I have experience with front end development, website design, and social media marketing strategies. I also play the guitar and engage in recreational fishing on my yearly trips to Jalisco Mexico. 
-
+<br>
+<br>
 
 ---
 
@@ -47,6 +48,8 @@ I'm a fourth-year transfer student majoring in computer engineering major at UC 
 Socials: [Github](https://github.com/sjin799) / [LinkedIn](https://www.linkedin.com/in/shengqiujin/)
 
  I'm a third-year computer engineering major at UC San Diego. I love to draw and watch movies and animes. I have hold 2 graphic design positions for different student organizations. I am experience in Figma and Canva for illustration/UI design and. I will be doing a software engineering co-op with Collins Aerospace for next winter and spring to develope new feature on estimating landing distance on airplane. 
+<br>
+<br>
 
 ---
 
@@ -59,7 +62,9 @@ Socials: [Github](https://github.com/anh010) / [LinkedIn](https://www.linkedin.c
 
 I'm a Third-year transfer computer engineering major at UC San Diego. Some of my hobbies include reading manga, playing video games and practicing karate. Im one of the Agile devs for this team since Ive front and back end experience, which includes working with databases, and handling user data. This quarter I'm volunteeering with the ECE outreach to design and teach the fundamentals of electrical and computer engineering to K-12 students in socioeconomically disadvantaged areas around San Diego.
 
+
 ---
+
 
 <img src="photos/Demi.jpeg" align="left" width="150" height="200">
 
@@ -70,20 +75,23 @@ Socials: [Github](https://github.com/demimao) / [LinkedIn](https://www.linkedin.
 I'm a third-year math-cs major at UC San Diego. I love watching fantasy movies, chilling out by the sea and exploring new restaurants. I'm one of the agile devs for the team and I look forward to working collaboratively with designer, front-end and back-end devs. I'm an officer at the UCSD Chinese Engineering Society, holding events such as intern mixer and data mining competition. Next quarter, I might work as a math contents tutor at the Teaching + Learning Commons at Geisel.
 
 ---
-<img src="photos/Rishi.jpg" align="left" width="150" height="200">
+
+<img src="photos/Rishi.jpg" align="left" width="" height="200">
 
 **Rishigesh Jayananth** - *Front End Developer*
 
 Socials: [Github](https://github.com/rjayanan) / [LinkedIn](https://www.linkedin.com/in/rishigesh-jayananth-024807243/)
 
- I'm a third-year computer engineering major at UC San Diego. I love to play basketball, volleyball, and watch anime. I've interned at HPE as a system validation engineer, working on various projects such as a Front End UI project as well as automating test cases. I currently still work there part time and currently working on my KCNA certification.
+I'm a third-year computer engineering major at UC San Diego. I love to play basketball, volleyball, and watch anime. I've interned at HPE as a system validation engineer, working on various projects such as a Front End UI project as well as automating test cases. I currently still work there part time and currently working on my KCNA certification.  
+
+<br>
 
 ---
 
-<img src="photos/Jinwoong.jpg" align="left" width="200" height="200">
+<img src="photos/Jinwoong.jpg" align="left" width="" height="200">
 
 **Jinwoong Huh** - *Planner*
 
 Socials: [Github](https://github.com/Jaywhuh) / [LinkedIn](https://www.linkedin.com/in/jinwoong-huh-009699197/)
 
- I'm a third-year computer engineering major at UC San Diego. I love to watch UFC, train boxing, and read fictional books during my free time. I've served in the South Korean military as an Operation Staff for 18 months, after my second year in UC San Diego. I am the planner for this team, and I look forward to working with the team this quarter. Next quarter, I might consider joining the Korean Scientists and Engineers Association. 
+I'm a third-year computer engineering major at UC San Diego. I love to watch UFC, train boxing, and read fictional books during my free time. I've served in the South Korean military as an Operation Staff for 18 months, after my second year in UC San Diego. I am the planner for this team, and I look forward to working with the team this quarter. Next quarter, I might consider joining the Korean Scientists and Engineers Association. 
