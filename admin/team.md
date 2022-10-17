@@ -29,6 +29,17 @@ I'm a third-year computer engineering major at UC San Diego. I love listening to
 
 ---
 
+<img src="photos/BrianM.jpg" align="left" width="" height="250">
+
+**Brian Mendez** - *Team Lead*
+
+Socials: [Github](https://github.com/b1mendez) / [LinkedIn](https://www.linkedin.com/in/brian-mendez-2530801b0/)
+
+I'm a fourth-year transfer student majoring in computer engineering major at UC San Diego. I was a tutor for over two years and recently launched an online tutoring company called Better Times Tutoring that specializes in STEM subjects from middle school to high school. I have experience with front end development, website design, and social media marketing strategies. I also play the guitar and engage in recreational fishing on my yearly trips to Jalisco Mexico. 
+
+
+---
+
 <img src="photos/Goldie.jpeg" align="left" width="" height="200">
 
 **Goldie (Shengqiu) Jin** - *Designer*
