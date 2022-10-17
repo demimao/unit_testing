@@ -98,13 +98,14 @@ I'm a third-year computer engineering major at UC San Diego. I love to watch UFC
 
 ___
 
-<img src="photos/Nikhil.jpg" align="left" width="200" height="260">
+<img src="photos/Nikhil.jpg" align="left" width="" height="200">
 
 **Nikhil Dange** - *Back End Developer*
 
 Socials: [Github](https://github.com/nik-dange) / [LinkedIn](https://www.linkedin.com/in/nsdange/)
 
 I'm a third-year computer engineering major at UC San Diego. In my spare time, I love to watch football and basketball (specifically the NFL and NBA). Outside of watching sports, I love to swim and am currently trying to get into rock climbing. I'm also part of ACM at UCSD, working on putting together software engineering-related workshops for UCSD students. Over the past year, I've worked as a software engineer at KeyNode Solutions, working on custom software solutions for clients. 
+<br>
 
 ___
 
