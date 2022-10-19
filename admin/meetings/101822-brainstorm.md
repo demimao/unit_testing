@@ -43,4 +43,4 @@ Absent:
 ---
 ### Diagram
 
-![Brainstorming Using Miro]((diagram-sc/MiroBrainstorm.jpg)
+![Brainstorming Using Miro](diagram-sc/MiroBrainstorm.jpg)
