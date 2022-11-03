@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**What is feature is being added?**
+**What is the feature being added?**
 A clear and concise description of what the problem is. 
 
 **How will this feature be implemented?**
