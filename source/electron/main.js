@@ -1,3 +1,4 @@
+const { Menu } = require("electron");
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -24,7 +25,12 @@ function createWindow () {
   });
 }
 
-app.on('ready', createWindow);
+app.on('ready', function(){
+  createWindow()
+  const template = []
+  const menu = Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
+});
 
 
 app.on('window-all-closed', () => {
