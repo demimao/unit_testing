@@ -12,10 +12,10 @@ Present:
 - Jinwoong
 - Alex
 - Goldie
+- Nikhil
 
 
 Absent: 
-- Nikhil
 - Rishigesh
 
 ---
