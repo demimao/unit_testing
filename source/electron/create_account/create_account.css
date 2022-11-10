@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg,#40E0D0, #40E0D0);
+  height: 100vh;
+  overflow: hidden;
+}
+.create_account_form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+h1{
+  text-align: center;
+  padding: 0px 0;
+  background: linear-gradient(120deg,#6399d1, #7dedf5);
+  font-size: 20px;
+}
+.create_account_form h1{ 
+  text-align: center;
+  border-bottom: 1px solid silver;
+}
+
+.login_cred {
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+input {
+  width: 75%;
+  padding: 0 5px;
+  font-size: 16px;
+  background: none;
+  outline: none;
+  border-color: lightgray;
+  border-radius: 5px;
+
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+button {
+  padding: 7px;
+  border-radius: 5px;
+  border-color: gray;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.cancelbtn {
+  padding: 0px 15px 0px 15px;
+}
+.cancelbtn:hover {
+  background-color: #dd7973;
+  border-color: black;
+}
+
+.createBtn:hover {
+  background-color: #33b249;
+  border-color: black;
+}
