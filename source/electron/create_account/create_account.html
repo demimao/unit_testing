@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="create_account.css" class="rel">
     <title>Frugal - The Simple Budgeting App</title>
 </head>
 <body>
     <body>
-        <h1>Frugal - The Simple Budgeting App </h1>
+        <div class="create_account_form">
+            <h1>Create an Account </h1>
+            <div class="login_cred">
+                <p><b>Enter username:</b></p>
+                <input type="text" placeholder="Enter username" name="username" required>
+            </div>
+            <div class="login_cred">
+                <p><b>Enter password:</b></p>
+                <input type="text" placeholder="Enter password" name="password" required>
+            </div>
+            <div class="login_cred">
+                <p><b>Re-enter password:</b></p>
+                <input type="text" placeholder="Re-enter password" name="repeat_password" required>
+            </div>
+            <div class="buttons">
+                <button type="button" class="cancelbtn" onclick="history.back()">Cancel</button>
+                <button type="submit" class="createBtn">Create Account</button>
+            </div>
+            
+        </div>
         
-        <div class="login_cred">
-            <label>Enter Username:</label>
-            <span></span>
-            <input type="text" required>
-          </div>
-        <div class="login_cred">
-            <label>Enter Password:</label>
-            <span></span>
-            <input type="password" required>
-          </div>
-        <div class="login_cred">
-            <label>Reenter Password:</label>
-            <span></span>
-            <input type="password2" required>
-          </div>
-        <input type="submit" value="Create Account">
       </body>
 </body>
 </html>
