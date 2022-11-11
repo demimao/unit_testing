@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg,#40E0D0, #40E0D0);
+  height: 100vh;
+  overflow: hidden;
+}
+.centering{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+h1{
+  text-align: center;
+  padding: 0px 0;
+  background: linear-gradient(120deg,#6399d1, #7dedf5);
+  font-size: 20px;
+}
+.centering h2{
+    text-align: center;
+    border-bottom: 1px solid silver;
+  }
+.center h1{
+  text-align: center;
+  border-bottom: 1px solid silver;
+}
+h2{
+    text-align: center;
+    padding: 0px 0;
+    font-size: 20px;
+    background: linear-gradient(120deg,#6399d1, #7dedf5);
+    padding: 0 35px;
+  }
+
+.login_cred input{
+    width: 100%;
+    padding: 0 5px;
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .login_cred span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #0f72b3;
+    transition: .5s;
+  }
+  .login_cred input:focus ~ label,
+  .login_cred input:valid ~ label{
+    top: -5px;
+    color: #0f72b3;
+  }
+  .login_cred input:focus ~ span::before,
+  .login_cred input:valid ~ span::before{
+    width: 100%;
+  }
+  
+  input[type="submit"]{
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    background: #0f72b3;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  input[type="submit"]:hover{
+    border-color: #0f72b3;
+    transition: .4s;
+  }
+  .pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+  }
+  .pass:hover{
+    text-decoration: underline;
+  }
+  .login_cred label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: .5s;
+  }

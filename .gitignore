@@ -1,2 +1,3 @@
 /source/electron/node_modules
 /source/electron/package-lock.json
+/.vscode
