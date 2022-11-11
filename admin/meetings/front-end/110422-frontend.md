@@ -17,7 +17,6 @@ Present:
 <ins>Sunday Nov 13, 2022</ins>
 - Sign-in / sign-up page
 - General layout for login - basic html and <ins>functionality</ins> first. 
-  - Include reset password option / screen
   - Include create account option /  screen
 
 ---
