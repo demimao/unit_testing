@@ -14,7 +14,7 @@ function createWindow () {
   win = new BrowserWindow({width: 800, height: 600,icon: __dirname + '/icon.ico' })
 
   win.loadURL(url.format({
-    pathname: path.join(__dirname, 'login_page/login_page.html'),
+    pathname: path.join(__dirname, '../../login_page/login_page.html'),
     protocol: 'file:',
     slashes: true
   }));
