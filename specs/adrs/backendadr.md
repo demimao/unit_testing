@@ -8,7 +8,5 @@ This document will outline the architectural design decisions for the backend te
 - Ease of use for keeping technology stack constant
 - Existing familiarity with team members
 ### **Storage**
-electron-store
-- Considered SQL database - too time costly for project constraints and requirements
-- electron-store emphasizes local-first capabilities
-
+browserLocalstorage
+- SQL database was considered, but too complex/unnecessary for our purposes
