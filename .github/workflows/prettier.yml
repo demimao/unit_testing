@@ -1,4 +1,5 @@
-name: CI
+#This workflow standardizes styling across all HTML/CSS/Javascript files
+name: Prettier
 
 # Controls when the workflow will run
 on:
