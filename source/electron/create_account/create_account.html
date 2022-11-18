@@ -9,25 +9,36 @@
 </head>
 <body>
     <body>
+        <script src="create_account.js"></script>
         <h1>Frugal - The Simple Budgeting App </h1>
         <div class="create_account_form">
             <h1>Create an Account </h1>
             <div class="login_cred">
                 <p><b>Enter username:</b></p>
-                <input type="text" placeholder="Enter username" name="username" required>
+                <input type="text" placeholder="Enter username" name="username" id="user" required>
             </div>
             <div class="login_cred">
                 <p><b>Enter password:</b></p>
-                <input type="text" placeholder="Enter password" name="password" required>
+                <input type="text" placeholder="Enter password" name="password" id="pass_word" required>
             </div>
             <div class="login_cred">
                 <p><b>Re-enter password:</b></p>
                 <input type="text" placeholder="Re-enter password" name="repeat_password" required>
             </div>
-            <div class="buttons">
+            <div class="buttons">z
                 <button type="button" class="cancelbtn" onclick="history.back()">Cancel</button>
-                <button type="submit" class="createBtn">Create Account</button>
+                <button type="submit" class="createBtn" onclick="sampleClick()" id="create">Create Account</button>
             </div>
+            <script>
+                function sampleClick() {
+                varbtnX = document.getElementById("create");
+                user = document.getElementById('user').value;
+                pass = document.getElementById('pass_word').value;
+                console.log(user);
+                console.log(pass);
+                console.log(store.store);
+                }
+            </script>
 
         </div>- 
         
