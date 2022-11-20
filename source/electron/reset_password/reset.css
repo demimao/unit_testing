@@ -99,10 +99,9 @@ h2{
     text-decoration: underline;
   }
   .login_cred label{
-    position: absolute;
     top: 50%;
     left: 5px;
-    color: #adadad;
+    color: #1900ff;
     transform: translateY(-50%);
     font-size: 18px;
     pointer-events: none;

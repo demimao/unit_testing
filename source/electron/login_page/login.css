@@ -8,29 +8,47 @@
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg,#40E0D0, #40E0D0);
   height: 100vh;
   overflow: hidden;
+  background-image: url("../assets/images/background-login.jpg");
+  background-size: cover;
+  
 }
 .center{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
   width: 400px;
-  background: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  background: transparent;
 }
-h1{
+
+h2 {
   text-align: center;
-  padding: 0px 0;
-  background: linear-gradient(120deg,#6399d1, #7dedf5);
-  font-size: 20px;
+  margin-top: 8%;
+  margin-bottom: 10%;
+  font-family: 'Montserrat';
+  font-size: 40px;
+  color: #ffffff;
+}
+/* logo */
+.imageLogin{
+  max-width: 5%;
+  max-height: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
 }
 .center h1{
   text-align: center;
   border-bottom: 1px solid silver;
+  color: #ffffff;
+  font-size: 26px;
+  padding-top: 20px;
 }
 .center form{
   padding: 0 35px;
@@ -41,6 +59,7 @@ form .login_cred{
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
 }
+
 .login_cred input{
   width: 100%;
   padding: 0 5px;
@@ -49,6 +68,7 @@ form .login_cred{
   border: none;
   background: none;
   outline: none;
+  color: white;
 }
 .login_cred label{
   position: absolute;
@@ -67,13 +87,13 @@ form .login_cred{
   left: 0;
   width: 0%;
   height: 2px;
-  background: #0f72b3;
+  background: #a5a5a5;
   transition: .5s;
 }
 .login_cred input:focus ~ label,
 .login_cred input:valid ~ label{
   top: -5px;
-  color: #0f72b3;
+  color: #ffffff;
 }
 .login_cred input:focus ~ span::before,
 .login_cred input:valid ~ span::before{
@@ -83,10 +103,24 @@ form .login_cred{
   margin: -5px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
+  display:inline-block;
+
+  
 }
+.pass a[href="../reset_password/reset_password.html"] {
+  color: white;
+  text-decoration: none;
+}
+.pass a[href="../create_account/create_account.html"] {
+  padding-left: 100px;
+  color: white;
+  text-decoration: none;
+}
+
 .pass:hover{
-  text-decoration: underline;
+  text-decoration: none;
 }
+
 input[type="submit"]{
   width: 100%;
   height: 30px;
