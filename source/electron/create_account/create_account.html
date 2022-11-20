@@ -1,45 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="create_account.css" class="rel">
-    <title>Frugal - The Simple Budgeting App</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="create_account.css" class="rel">
+  <script src="create_account.js"></script>
+  <title>Frugal - The Simple Budgeting App</title>
 </head>
-    <body>
-        <script src="create_account.js"></script>
-        <h1>Frugal - The Simple Budgeting App </h1>
-        <div class="create_account_form">
-            <h1>Create an Account </h1>
-            <div class="login_cred">
-                <p><b>Enter username:</b></p>
-                <input type="text" placeholder="Enter username" name="username" id="user" required>
-            </div>
-            <div class="login_cred">
-                <p><b>Enter password:</b></p>
-                <input type="text" placeholder="Enter password" name="password" id="pass_word" required>
-            </div>
-            <div class="login_cred">
-                <p><b>Re-enter password:</b></p>
-                <input type="text" placeholder="Re-enter password" name="repeat_password" required>
-            </div>
-            <div class="buttons">
-                <button type="button" class="cancelbtn" onclick="history.back()">Cancel</button>
-                <button type="submit" class="createBtn" onclick="sampleClick()" id="create">Create Account</button>
-            </div>
-            <script>
-                function sampleClick() {
-                varbtnX = document.getElementById("create");
-                user = document.getElementById('user').value;
-                pass = document.getElementById('pass_word').value;
-                console.log(user);
-                console.log(pass);
-                console.log(store.store);
-                }
-            </script>
-
-        </div> 
-        
-    </body>
+  <body>
+    <script src="create_account.js"></script>
+    <h1>Frugal - The Simple Budgeting App </h1>
+    <div class="main_content">
+      <img src="../assets/Logos/Logo (light).png" alt="logo">
+      <h2>Welcome to Frugal </h2>
+      <div class="create_account_form">
+        <input class="form_input" type="text" placeholder="Enter New Username" name="username" id="user" required>
+        <input class="form_input" type="text" placeholder="Enter New Password" name="password" id="password" required>
+        <input class="form_input" type="text" placeholder="Confirm New Password" name="repeat_password" required>
+        <button type="submit" class="createBtn" onclick="sampleClick()" id="create">Sign Up</button>
+        <button type="button" class="cancelbtn" onclick="history.back()">Cancel</button>
+      </div> 
+    </div>  
+  </body>
 </html>
