@@ -25,7 +25,7 @@ document.querySelector("#add-row").addEventListener("click", () => {
     column2.appendChild(column2text);
 
     let column3 = document.createElement("td");
-    const column3text = document.createTextNode(document.getElementById("amount").value);
+    const column3text = document.createTextNode('$'+document.getElementById("amount").value);
     column3.appendChild(column3text);
 
     let column4 = document.createElement("td");
@@ -57,12 +57,24 @@ document.querySelector("#add-row").addEventListener("click", () => {
     //appends the row to the table
     document.querySelector("#main-table").appendChild(row);
     // Clear values in input boxes
-    document.getElementById("name").value = ''
-    document.getElementById("category").value = ''
-    document.getElementById("amount").value = ''
-    document.getElementById("date").value = ''
+    document.getElementById("name").value = '';
+    document.getElementById("category").value = '';
+    document.getElementById("amount").value = '';
+    document.getElementById("date").value = '';
     x++;
     };
     function editRow(){
         alert('Edit Button was clicked')
+    }
+    function inputCheck(){
+        const name = document.getElementById("name").value;
+        const category = document.getElementById("category").value;
+        const amount = document.getElementById("amount").value;
+        const date = document.getElementById("date").value;
+        // Check that category is either Wants Needs or Savings
+        // Check that date entry is a valid date
+        // Check that amount is a valid integer
+    }
+    function deleteRow(){
+
     }
