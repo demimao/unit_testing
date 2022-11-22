@@ -19,7 +19,7 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -10%);
   width: 400px;
   backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);    
   border-width: 1px;
