@@ -38,7 +38,7 @@ document.querySelector("#add-row").addEventListener("click", () => {
     btn.type = "submit";
     btn.name = "formBtn";
     btn.id = 'btnn'
-    btn.style.paddingRight = '200 px'
+    btn.style =  'margin: 0;'
     btn.addEventListener("click", function () {
         editRow()
       });
@@ -53,6 +53,9 @@ document.querySelector("#add-row").addEventListener("click", () => {
     row.appendChild(column3);
     row.appendChild(column4);
     row.appendChild(column5);
+    // Backend Add Row to Database
+    //let expenses = localStorage.getItem('expenses') ? new Map(JSON.parse(localStorage.getItem('expenses'))) : new Map()
+
     
     //appends the row to the table
     document.querySelector("#main-table").appendChild(row);

@@ -1,10 +1,24 @@
 /* Include the padding and border in an element's total width and height */
-* {
+  *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
   }
-  hr {
-    width: 800px;
-    margin-left: 0;
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,65,199,1) 0%, rgba(7,236,254,1) 100%); 
+    background-size: cover;
+    
+  }
+  h2{
+    text-align: left;
+    font-size: 40px;
+    color: #ffffff;
   }
 .heading {
     padding-left: 20px;
@@ -16,18 +30,20 @@
     margin-left: 0;
     }
     #main-table {
-    width: 800px;
+    width: 1350px;
     color: white;
 
     }
     #main-table th {
     background: #27afd8;
     padding: 5px;
+    height: 50px;
     }
     #main-table td {
     background: #4a9eb8;
     text-align: center;
     padding: 5px;
+    margin: 0 auto;
     }
     
     #table-container button {
@@ -39,3 +55,34 @@
     color: white;
     cursor: pointer;
     }
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
