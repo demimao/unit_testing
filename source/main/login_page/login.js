@@ -8,18 +8,16 @@ let submit = document.getElementById('send')
 submit.addEventListener("click", check);
 //checking
 function check(){
-  var storedName = localStorage.getItem('name');
-  var storedPw = localStorage.getItem('pw');
-
-  var name = document.getElementById('username');
-  var pw = document.getElementById('password');
-
-  if(name.value == storedName && pw.value == storedPw){
-      alert('You are logged in.');
-      console.log("success");
-  }else{
-      alert('Error on login');
-      console.log("fail");
-
+  let name = document.getElementById('username');
+  let pw = document.getElementById('password');
+  let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
+  if(users.has(name.value)){
+    if(users.get(name.value) == pw.value){
+      alert("Success!")
+    } else{
+      alert("Invalid password")
+    }
+  } else {
+    alert("Account under " + name.value + " does not exist.")
   }
-}
+} 
