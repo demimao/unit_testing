@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="home_page.css">
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2>Expenses</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="category" placeholder="Category">
+        <input type="text" id="amount" placeholder="Amount">
+        <input type="text" id="date" placeholder="Date">
+        <button type="submit"  id="add-row">Add Expense</button>
+      </div>
+      <br>
+      <hr>
+      <div id="table-container">
+        <table id="main-table" cellspacing="0">
+        <th colspan="5"></th>
+        <tr>
+            <td>Name</td>
+            <td>Category</td>
+            <td>Amount</td>
+            <td>Date</td>
+            <td>Action</td>
+        </tr>
+        </table>
+    </div>
+      <hr>
+      <ul id="myUL">
+      </ul>
+</body>
+<script src="homePage.js"></script>
+</html>
