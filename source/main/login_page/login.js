@@ -18,6 +18,11 @@ function check(){
       alert("Invalid password")
     }
   } else {
-    alert("Account under " + name.value + " does not exist.")
+    if(name.value.length == 0 || pw.value.length == 0){
+      return
+    } else{
+      alert("Account under " + name.value + " does not exist.")
+    }
+    
   }
 } 
