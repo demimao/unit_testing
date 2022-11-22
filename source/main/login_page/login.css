@@ -107,7 +107,7 @@ form .login_cred{
   width: 100%;
 }
 .pass{
-  margin: -5px 0 20px px;
+  margin: -5px 0 20px;
   color: #e6e6e6;
   cursor: pointer;
   display:inline-block;
