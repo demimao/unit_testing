@@ -27,6 +27,13 @@
 .heading {
     padding-left: 20px;
 }
+#logout {
+  position:fixed;
+  right:10px;
+  top:5px;
+  cursor: pointer;
+  padding: 5px;
+}
 #table-container {
     max-width: 400px;
     padding: 5px;
