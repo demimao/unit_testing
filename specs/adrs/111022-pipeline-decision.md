@@ -14,7 +14,7 @@ How do we lint our code and format through github actions?
 
 ## Decision Outcome
 
-Chosen option: We chose the github HTML validator, the super linter, prettier from github marketplace
+Chosen option: We chose the github HTML validator, the Super Linter, prettier from github marketplace
 
 ### Consequences
 
