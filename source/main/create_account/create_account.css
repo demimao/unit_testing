@@ -21,7 +21,7 @@ body{
   display: flex;
   flex-direction: column;
   position: absolute;
-  max-height: 85vh;
+  max-height: 90vh;
   top: 50%;
   left: 50%;
   max-width: fit-content;
