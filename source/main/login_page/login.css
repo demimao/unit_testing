@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -15,7 +14,7 @@ body{
   background-size: cover;
   
 }
-.center{
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,7 +38,7 @@ h2 {
   color: #ffffff;
 }
 /* logo */
-.imageLogin{
+.imageLogin {
   max-width: 5%;
   max-height: 5%;
   display: block;
@@ -49,7 +48,7 @@ h2 {
   width: 50%;
   
 }
-.center h1{
+.center h1 {
   text-align: center;
   border-bottom: 1px solid silver;
   color: #ffffff;
@@ -57,17 +56,17 @@ h2 {
   padding-top: 3%;
   padding-bottom: 3%;
 }
-.center form{
+.center form {
   padding: 0 35px;
   box-sizing: border-box;
 }
-form .login_cred{
+form .login_cred {
   position: relative;
   border-bottom: 2px solid #e6e6e6;
   margin: 30px 0;
 }
 
-.login_cred input{
+.login_cred input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -77,7 +76,7 @@ form .login_cred{
   outline: none;
   color: white;
 }
-.login_cred label{
+.login_cred label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -87,7 +86,7 @@ form .login_cred{
   pointer-events: none;
   transition: .5s;
 }
-.login_cred span::before{
+.login_cred span::before {
   content: '';
   position: absolute;
   top: 40px;
@@ -98,12 +97,12 @@ form .login_cred{
   transition: .5s;
 }
 .login_cred input:focus ~ label,
-.login_cred input:valid ~ label{
+.login_cred input:valid ~ label {
   top: -5px;
   color: #ffffff;
 }
 .login_cred input:focus ~ span::before,
-.login_cred input:valid ~ span::before{
+.login_cred input:valid ~ span::before {
   width: 100%;
 }
 .pass{
@@ -124,11 +123,11 @@ form .login_cred{
   text-decoration: none;
 }
 
-.pass:hover{
+.pass:hover {
   text-decoration: none;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   width: 100%;
   height: 40px;
   margin-top: 3%;
@@ -141,19 +140,19 @@ input[type="submit"]{
   color: white;
   background-color: #0f72b3;
 }
-input[type="submit"]:hover{
+input[type="submit"]:hover { 
   transform: scale(1.05);
 }
-.signup_link{
+.signup_link {
   margin: 30px 0;
   text-align: center;
   font-size: 18px;
   color: #666666;
 }
-.signup_link a{
+.signup_link a {
   color: #0f72b3;
   text-decoration: none;
 }
-.signup_link a:hover{
+.signup_link a:hover {
   text-decoration: underline;
 }
