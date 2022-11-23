@@ -1,3 +1,4 @@
+let user = sessionStorage.getItem('username');
 
 //Adds a click listener to the add-row button
 document.querySelector("#add-row").addEventListener("click", () => {
@@ -81,3 +82,11 @@ document.querySelector("#add-row").addEventListener("click", () => {
     function deleteRow(){
 
     }
+
+let logout = document.getElementById('logout');
+logout.addEventListener('click', logoutAction)
+function logoutAction() {
+    // alert('logout button was clicked');
+    event.preventDefault();
+    window.location.replace("../login_page/login_page.html")
+}
