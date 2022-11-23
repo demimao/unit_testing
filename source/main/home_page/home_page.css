@@ -10,14 +10,18 @@
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,65,199,1) 0%, rgba(7,236,254,1) 100%); 
+    position: relative;
+    width: 3883px;
+    height: 2680px;
+    background: linear-gradient(269.92deg, #0D5697 1.12%, #59A7EC 57.12%, #D0F7FC 107.81%);
     background-size: cover;
     
+    
   }
+  
   h2{
     text-align: left;
-    font-size: 40px;
+    font-size: 20px;
     color: #ffffff;
   }
 .heading {
@@ -85,4 +89,9 @@
 
 .container .btn:hover {
   background-color: black;
+}
+.line {
+    overflow: hidden;
+    white-space: nowrap;
+    border:#0D5697
 }
