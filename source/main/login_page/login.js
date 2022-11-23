@@ -6,14 +6,18 @@ if it exists, alert that login was a success
 
 let submit = document.getElementById('send')
 submit.addEventListener("click", check);
+
 //checking
 function check(){
+
   let name = document.getElementById('username');
   let pw = document.getElementById('password');
   let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
   if(users.has(name.value)){
     if(users.get(name.value) == pw.value){
-      alert("Success!")
+      //alert("Success!")
+      event.preventDefault();
+      window.location.replace("../home_page/home_page.html")
     } else{
       alert("Invalid password")
     }
