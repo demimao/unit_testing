@@ -1,3 +1,4 @@
+let user = sessionStorage.getItem('username');
 
 //Adds a click listener to the add-row button
 document.querySelector("#add-row").addEventListener("click", () => {

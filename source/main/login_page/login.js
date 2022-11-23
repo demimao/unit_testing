@@ -17,6 +17,7 @@ function check(){
     if(users.get(name.value) == pw.value){
       //alert("Success!")
       event.preventDefault();
+      sessionStorage.setItem('username', name.value)
       window.location.replace("../home_page/home_page.html")
     } else{
       alert("Invalid password")
