@@ -1,6 +1,10 @@
 let user = sessionStorage.getItem('username');
+// js to create a username icon with their name
+let ele = document.getElementById('account');
+let node = document.createTextNode (user);
+ele.appendChild(node);
+//Adds a click listener to the add-row buttons
 
-//Adds a click listener to the add-row button
 document.querySelector("#add-row").addEventListener("click", () => {
     //calls the addRow() method on clicking the button
     addRow();
