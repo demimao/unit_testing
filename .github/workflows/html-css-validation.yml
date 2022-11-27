@@ -3,7 +3,7 @@ name: HTML-CSS-EXP-Validation
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the "main" branch and testing branch (remove test branch name before PR)
   push:
     branches: [ "main" , "testing-experimental-html-validator"]
   pull_request:
