@@ -1,0 +1,111 @@
+/* Include the padding and border in an element's total width and height */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 3883px;
+    height: 2680px;
+    background: linear-gradient(269.92deg, #0D5697 1.12%, #59A7EC 57.12%, #D0F7FC 107.81%);
+    background-size: cover;
+    
+    
+  }
+  h1 {
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    cursor: pointer;
+    padding: 5px;
+      }
+  h2{
+    text-align: left;
+    font-size: 20px;
+    color: #ffffff;
+  }
+.heading {
+    padding-left: 20px;
+}
+
+#corner {
+  position:fixed;
+  right:10px;
+  top:5px;
+  cursor: pointer;
+  padding: 5px;
+}
+#table-container {
+    max-width: 400px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-left: 0;
+    }
+    #main-table {
+    width: 1200px;
+    color: white;
+
+    }
+    #main-table th {
+    background: #27afd8;
+    padding: 5px;
+    height: 50px;
+    }
+    #main-table td {
+    background: #4a9eb8;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    }
+    
+    #table-container button {
+    float: right;
+    border: none;
+    padding: 5px 12px;
+    margin: 10px 0;
+    background: #27afd8;
+    color: white;
+    cursor: pointer;
+    }
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+.line {
+    overflow: hidden;
+    white-space: nowrap;
+    display:inline-block;
+}
