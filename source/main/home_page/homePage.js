@@ -4,20 +4,36 @@ let ele = document.getElementById('corner');
 let node = document.createTextNode (user);
 ele.style.color = 'white';
 
-
 ele.prepend(node);
+
+// Backend to read database and populate table when page gets opened
+
+
+finalValue = []
+
+
+// Get expenses of the logged in user from the database
 
 //Adds a click listener to the add-row buttons
 
 document.querySelector("#add-row").addEventListener("click", () => {
     //calls the addRow() method on clicking the button
-    addRow();
+    let expenseName = document.getElementById("name").value;
+    let expenseCategory = document.getElementById("category").value;
+    let expenseAmount = document.getElementById("amount").value;
+    let expenseDate = document.getElementById("date").value;
+    addRow(expenseName,expenseCategory, expenseAmount, expenseDate);
+    // Clear values in input boxes
+    document.getElementById("name").value = '';
+    document.getElementById("category").value = '';
+    document.getElementById("amount").value = '';
+    document.getElementById("date").value = '';
     });
     
     //initializing the row counter
     let x = 2;
     
-    const addRow = () => {
+    const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
     //creates a new row element
     let row = document.createElement("tr");
     
@@ -25,20 +41,21 @@ document.querySelector("#add-row").addEventListener("click", () => {
     let column1 = document.createElement("td");
     
     //create text for the column element
-    const column1text = document.createTextNode(document.getElementById("name").value);
+    const column1text = document.createTextNode(expenseName);
     
     //appends the text to the column element
     column1.appendChild(column1text);
     let column2 = document.createElement("td");
-    const column2text = document.createTextNode(document.getElementById("category").value);
+
+    const column2text = document.createTextNode(expenseCategory);
     column2.appendChild(column2text);
 
     let column3 = document.createElement("td");
-    const column3text = document.createTextNode('$'+document.getElementById("amount").value);
+    const column3text = document.createTextNode('$' + expenseAmount);
     column3.appendChild(column3text);
 
     let column4 = document.createElement("td");
-    const column4text = document.createTextNode(document.getElementById("date").value);
+    const column4text = document.createTextNode(expenseDate);
     column4.appendChild(column4text);
     
     let column5 = document.createElement("td");
@@ -62,19 +79,32 @@ document.querySelector("#add-row").addEventListener("click", () => {
     row.appendChild(column3);
     row.appendChild(column4);
     row.appendChild(column5);
-    // Backend Add Row to Database
-    //let expenses = localStorage.getItem('expenses') ? new Map(JSON.parse(localStorage.getItem('expenses'))) : new Map()
 
+
+    // Adding new data to the front end table
     
     //appends the row to the table
     document.querySelector("#main-table").appendChild(row);
-    // Clear values in input boxes
-    document.getElementById("name").value = '';
-    document.getElementById("category").value = '';
-    document.getElementById("amount").value = '';
-    document.getElementById("date").value = '';
     x++;
+    let expenseValue = {
+        name: expenseName,
+        category: expenseCategory,
+        value: expenseAmount,
+        date:  expenseDate,
+    }
+
+    // Backend Add Row to Database
+    let expenses = localStorage.getItem('expenses') ? new Map(JSON.parse(localStorage.getItem('expenses'))) : new Map()   
+    
+    finalValue.push(expenseValue)
+
+    expenses.set(user, finalValue);
+    localStorage.setItem('expenses', JSON.stringify(Array.from(expenses)))
+
+
+
     };
+    
     function editRow(){
         alert('Edit Button was clicked')
     }
