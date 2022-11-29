@@ -57,10 +57,10 @@
 </body>
 <script src="homePage.js"></script>
 <script>
-    let expenses = localStorage.getItem('expenses') ? new Map(JSON.parse(localStorage.getItem('expenses'))) : new Map() 
-    if (expenses.get(user).length != 0){
-        for (const expense in expenses.get(user)){
-            addRow(expenses.get(user)[expense].name, expenses.get(user)[expense].category, expenses.get(user)[expense].value, expenses.get(user)[expense].date);
+    result = JSON.parse(localStorage.getItem(user));
+    if (result != null){ //if not null, we have at least one expense
+        for (let i = 0; i < result.length; i++) {
+            addRow(result[i].name, result[i].category, result[i].value, result[i].date);
         }
     }
 </script>

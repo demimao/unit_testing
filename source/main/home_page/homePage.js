@@ -94,12 +94,11 @@ document.querySelector("#add-row").addEventListener("click", () => {
     }
 
     // Backend Add Row to Database
-    let expenses = localStorage.getItem('expenses') ? new Map(JSON.parse(localStorage.getItem('expenses'))) : new Map()   
+    let key = localStorage.getItem(user) ? new Map(JSON.parse(localStorage.getItem(user))) : new Map()   
     
     finalValue.push(expenseValue)
 
-    expenses.set(user, finalValue);
-    localStorage.setItem('expenses', JSON.stringify(Array.from(expenses)))
+    localStorage.setItem(user, JSON.stringify(Array.from(finalValue)))
 
 
 
