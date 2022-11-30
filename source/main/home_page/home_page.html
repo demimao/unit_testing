@@ -15,45 +15,46 @@
     <div id = 'corner'>
         <button id="logout">Log Out</button>
     </div>
-    <div id="myDIV" class="header">
-        <h2>Expenses</h2>
-        <input type="text" id="name" placeholder="Name" size="20" style="height:25px;font-size:14pt;">
-        &nbsp;
-        &nbsp;
-        <input type="text" id="category" placeholder="Category" size="20" style="height:25px;font-size:14pt;">
-        &nbsp;
-        &nbsp;
-        <input type="text" id="amount" placeholder="Amount" size="20" style="height:25px;font-size:14pt;">
-        &nbsp;
-        &nbsp;
-        <input type="text" id="date" placeholder="Date" size="20" style="height:25px;font-size:14pt;">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
+    <br>
+    <input type="image" src="../assets/images/add.png" width ='200 px' height = '40 px' name="saveForm"  id="add-row" alt="logo"/>
+    <div class="form-popup" id="expense">
+        <form class="form-container">      
+          <label for="expense"><b>Expense: </b></label>
+          <input type="text" id="name" placeholder="Name" size="20" style="height:25px;font-size:14pt;">
+      
+          <label for="amount"><b>Value: </b></label>
+          <input type="text" id="amount" placeholder="Amount" size="20" style="height:25px;font-size:14pt;">
 
-        <input type="image" src="../assets/images/add.png" width ='30 px' height = '30 px' name="saveForm"  id="add-row" />
+          <label for="category">Category:</label>
+          <select id="category" name="expensetype">
+            <option value="wants">Wants</option>
+            <option value="needs">Needs</option>
+            <option value="savings">Savings</option>
+        </select>
 
-      </div>
-      <br>
-      <hr>
+          <label for=" date"><b>Date:</b></label>
+          <input type="text" id="date" placeholder="mm//dd/yyyy" size="20" style="height:25px;font-size:14pt;">
+
+          <button type="submit" class="btn" id="adding">Add Expense</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>      
       <div id="table-container">
         <table id="main-table" cellspacing="0">
-        <th colspan="5"></th>
         <tr>
-            <td>Name</td>
-            <td>Category</td>
-            <td>Amount</td>
-            <td>Date</td>
-            <td>Action</td>
+            <td id="names">Expense Name</td>
+            <td id="categorys">Category</td>
+            <td id="amounts">Amount</td>
+            <td id="dates">Date</td>
+            <td id="actions">Action</td>
         </tr>
         </table>
     </div>
-      <hr>
-      <ul id="myUL">
-      </ul>
+    <div id = imagesLine>
+        <img src="../assets/images/Waves.png" id="bottom" alt="logo">
+        <img src="../assets/Logos/byte.png" id="logo" alt="logo">
+    </div>
+
 </body>
 <script src="homePage.js"></script>
 <script>

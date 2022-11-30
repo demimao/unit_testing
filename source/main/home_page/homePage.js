@@ -11,15 +11,21 @@ ele.prepend(node);
 
 finalValue = []
 
-
-// Get expenses of the logged in user from the database
-
+function openForm() {
+    document.getElementById("expense").style.display = "block";
+}
+function closeForm() {
+    document.getElementById("expense").style.display = "none";
+}
 //Adds a click listener to the add-row buttons
 
-document.querySelector("#add-row").addEventListener("click", () => {
-    //calls the addRow() method on clicking the button
+//Adds a click listener to the add-row buttons where after add expense button is pressed, form is opened
+document.querySelector("#adding").addEventListener("click", () => {
+    // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
     let expenseName = document.getElementById("name").value;
     let expenseCategory = document.getElementById("category").value;
+    
+
     let expenseAmount = document.getElementById("amount").value;
     let expenseDate = document.getElementById("date").value;
     addRow(expenseName,expenseCategory, expenseAmount, expenseDate);
@@ -28,6 +34,12 @@ document.querySelector("#add-row").addEventListener("click", () => {
     document.getElementById("category").value = '';
     document.getElementById("amount").value = '';
     document.getElementById("date").value = '';
+    closeForm();
+    
+    });
+document.querySelector("#add-row").addEventListener("click", () => {
+    // Open form item
+    openForm();
     });
     
     //initializing the row counter
@@ -36,7 +48,7 @@ document.querySelector("#add-row").addEventListener("click", () => {
     const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
     //creates a new row element
     let row = document.createElement("tr");
-    
+    //row.style.border-bottom-color =  "#ff0000";
     //creates a new column element
     let column1 = document.createElement("td");
     
@@ -79,6 +91,7 @@ document.querySelector("#add-row").addEventListener("click", () => {
     row.appendChild(column3);
     row.appendChild(column4);
     row.appendChild(column5);
+
 
 
     // Adding new data to the front end table
