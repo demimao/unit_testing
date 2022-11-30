@@ -18,26 +18,31 @@
     <br>
     <input type="image" src="../assets/images/add.png" width ='200 px' height = '40 px' name="saveForm"  id="add-row" alt="logo"/>
     <div class="form-popup" id="expense">
-        <form class="form-container">      
+        <form class="form-container">     
+					<button class="close-button" aria-label="Close alert" type="button" onclick="closeForm()">
+						<span aria-hidden="true">&times;</span>
+					</button>
           <label for="expense"><b>Expense: </b></label>
-          <input type="text" id="name" placeholder="Name" size="20" style="height:25px;font-size:14pt;">
-      
+          <input type="text" id="name" placeholder="Item" size="20" style="height:25px;font-size:14pt;">
+
           <label for="amount"><b>Value: </b></label>
           <input type="number" id="amount" placeholder="Amount" size="20" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
           !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
 
-          <label for="category">Category:</label>
+          <label for="category"><b>Category:</b></label>
           <select id="category" name="expensetype">
             <option value="wants">Wants</option>
             <option value="needs">Needs</option>
             <option value="savings">Savings</option>
-        </select>
+        	</select>
 
           <label for=" date"><b>Date:</b></label>
           <input type="date" id="date" placeholder="mm/dd/yyyy" size="20" style="height:25px;font-size:14pt;">
 
-          <button type="submit" class="btn" id="adding">Add Expense</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+					<div class="button-wrapper">
+						<button type="submit" class="addBtn" id="adding">Add Expense</button>
+					</div>
+          
         </form>
     </div>      
       <div id="table-container">
