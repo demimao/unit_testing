@@ -37,13 +37,13 @@ body{
 }
 
 /* logo */
-.main_content img[src="../assets/Logos/logo-light.png"] {
+.main_content img[src="../assets/Logos/logo-dark.png"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 15%;
   height: auto;
-  filter: brightness(85%);
+  filter: brightness(100%);
 }
 
 .main_content h2 {
