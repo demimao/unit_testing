@@ -13,12 +13,12 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(82.92deg, #0D5697 1.12%, #59A7EC 57.12%, #D0F7FC 107.81%);
+    background: #1e75c1;
     background-size: cover;
   }
   
   #add-row {
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 5px;
   }
 
@@ -151,7 +151,7 @@
   right: 0px;
   bottom: 0px;
   width: fit-content;
-  height: 50%;
+  height: 40%;
 
   }
 #main-table #names {
