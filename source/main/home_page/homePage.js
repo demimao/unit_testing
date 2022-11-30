@@ -113,8 +113,6 @@ document.querySelector("#add-row").addEventListener("click", () => {
 
     localStorage.setItem(user, JSON.stringify(Array.from(finalValue)))
 
-
-
     };
     
     function editRow(){

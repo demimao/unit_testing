@@ -1,6 +1,11 @@
 let submit = document.getElementById('create')
 submit.addEventListener("click", store);
 
+/**
+ * This function will validate the username and password the user has entered, 
+ * and add to localStorage if it does not already exist,
+ * else, it will alert that an identical account exists.
+ */
 function store(){
 
     let name = document.querySelector('[name="username"]');
@@ -9,6 +14,7 @@ function store(){
     let lowerCaseLetters = /[a-z]/g;
     let upperCaseLetters = /[A-Z]/g;
     let numbers = /[0-9]/g;
+    // Validate name and password requirements
     if(name.value.length == 0){
         alert('Please fill in email');
 
@@ -31,6 +37,7 @@ function store(){
         alert("Passwords don't match");
 
     }
+    // If valid, check if already exists in DB
     else {
         let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
         if(users.has(name.value)){

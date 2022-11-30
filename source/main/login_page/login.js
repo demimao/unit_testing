@@ -8,6 +8,11 @@ let submit = document.getElementById('send')
 submit.addEventListener("click", check);
 
 //checking
+/**
+ * 
+ * @returns Nothing if successful, and reroutes to home page
+ * else, displays an alert that says the user does not exist.
+ */
 function check(){
 
   let name = document.getElementById('username');
@@ -15,7 +20,7 @@ function check(){
   let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
   if(users.has(name.value)){
     if(users.get(name.value) == pw.value){
-      //alert("Success!")
+      // If successful login
       event.preventDefault();
       sessionStorage.setItem('username', name.value)
       window.location.replace("../home_page/home_page.html")
