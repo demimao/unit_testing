@@ -14,7 +14,6 @@ submit.addEventListener("click", check);
  * else, displays an alert that says the user does not exist.
  */
 function check(){
-
   let name = document.getElementById('username');
   let pw = document.getElementById('password');
   let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
@@ -25,14 +24,17 @@ function check(){
       sessionStorage.setItem('username', name.value)
       window.location.replace("../home_page/home_page.html")
     } else{
-      alert("Invalid password")
+      event.preventDefault();
+      alert("Invalid Password")
+      window.location.replace("../login_page/login_page.html")
     }
   } else {
     if(name.value.length == 0 || pw.value.length == 0){
       return
     } else{
+      event.preventDefault();
       alert("Account under " + name.value + " does not exist.")
+      window.location.replace("../login_page/login_page.html")
     }
-    
   }
 } 
