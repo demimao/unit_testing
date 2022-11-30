@@ -11,8 +11,16 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(269.92deg, #0D5697 1.12%, #59A7EC 57.12%, #D0F7FC 107.81%);
+    background: #1e75c1;
     background-size: cover;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+
+  #add-row {
+    margin-top: 1%;
+    margin-left: 5px;
   }
 
   .form-popup {
@@ -75,7 +83,9 @@
     cursor: pointer;
     padding: 5px;
     margin-left: 20px;
-      }
+    color:white;
+  }
+
   h2{
     text-align: left;
     font-size: 20px;
@@ -192,12 +202,11 @@
   
 }
 #bottom {
-  position: absolute;
+  position: fixed;
   right: 0px;
   bottom: 0px;
   width: fit-content;
-  height: 100%;
-
+  height: 40%;
   }
 #main-table #names {
   top: 20px;
