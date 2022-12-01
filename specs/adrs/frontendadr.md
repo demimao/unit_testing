@@ -21,3 +21,6 @@ This document will outline the architectural design decisions for the front end 
 - Front End Team Decision to make sure page designs go through designer during initial construction. This way FE devs and designer has an established channel for communication.
 - This way, developers can get wireframes/designs from designer and designer can give specific changes to developers. Developers can ask for logos or other icons from designer and devs can maintain input from designer
 
+### Search Bar Functionality
+- Front End Team decision to make the search bar act as a filter for the table displayed on the home page. This search bar will need to read from the database and then update the table accordingly
+ 

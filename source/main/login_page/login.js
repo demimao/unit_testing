@@ -19,6 +19,7 @@ function check(){
   let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
   if(users.has(name.value)){
     if(users.get(name.value) == pw.value){
+      
       // If successful login
       event.preventDefault();
       sessionStorage.setItem('username', name.value)

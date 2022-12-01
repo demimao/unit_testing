@@ -66,7 +66,6 @@ const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
 
     const column2text = document.createTextNode(expenseCategory);
     column2.appendChild(column2text);
-
     let column3 = document.createElement("td");
     const column3text = document.createTextNode('$' + expenseAmount);
     column3.appendChild(column3text);
@@ -85,6 +84,7 @@ const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
     btn.addEventListener("click", function () {
         editRow(row)
     });
+    
     const column5text = btn
     column5.appendChild(column5text)
     //appends the first column to the new row
@@ -109,7 +109,6 @@ const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
         value: expenseAmount,
         date:  expenseDate,
     }
-    console.log(expenseValue)
     // Backend Add Row to Database
     finalValue.push(expenseValue)
     localStorage.setItem(user, JSON.stringify(finalValue))
