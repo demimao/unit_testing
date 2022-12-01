@@ -24,3 +24,7 @@ This document will outline the architectural design decisions for the front end 
 ### Search Bar Functionality
 - Front End Team decision to make the search bar act as a filter for the table displayed on the home page. This search bar will need to read from the database and then update the table accordingly
  
+
+ ### Bugfixes
+ - Edit and Delete Bottom because entering an input would cause the click event listener of the delete button to go off and then delete entry
+ - html elements blocking edit button so temp fix was to comment out bottom div
