@@ -76,6 +76,15 @@
     padding: 3px;
   }
 
+  .delBtn {
+    margin-top: 4%;
+    width: fit-content;
+    cursor: pointer;
+    padding: 4px;
+    background-color: rgb(242, 91, 91);
+    border: none;
+  }
+
   h1 {
     position: absolute;
     top: 15px;

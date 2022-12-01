@@ -62,7 +62,37 @@
 					</div>
           
         </form>
-    </div>      
+    </div>
+    
+    <div class="form-popup" id="update">
+        <form class="form-container">     
+					<button class="close-button" aria-label="Close alert" type="button" onclick="closeUpdate()">
+						<span aria-hidden="true">&times;</span>
+					</button>
+          <label for="expense"><b>Expense: </b></label>
+          <input type="text" id="name_update" placeholder="Item" size="20" style="height:25px;font-size:14pt;">
+
+          <label for="amount"><b>Value: </b></label>
+          <input type="number" id="amount_update" placeholder="Amount" size="20" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+
+          <label for="category"><b>Category:</b></label>
+          <select id="category_update" name="expensetype">
+            <option value="Wants">Wants</option>
+            <option value="Needs">Needs</option>
+            <option value="Savings">Savings</option>
+        	</select>
+
+          <label for=" date"><b>Date:</b></label>
+          <input type="date" id="date_update" placeholder="mm/dd/yyyy" size="20" style="height:25px;font-size:14pt;">
+                    <div class="button-wrapper">
+                        <button type="submit" class="delBtn" id="deleting">Delete</button>
+                        <button type="submit" class="addBtn" id="updating">Update Expense</button>
+                    </div>
+          
+        </form>
+    </div> 
+
       <div id="table-container">
         <table id="main-table" cellspacing="0">
         <tr>
@@ -82,10 +112,10 @@
 </body>
 <script src="homePage.js"></script>
 <script>
-    result = JSON.parse(localStorage.getItem(user));
-    if (result != null){ //if not null, we have at least one expense
-        for (let i = 0; i < result.length; i++) {
-            addRow(result[i].name, result[i].category, result[i].value, result[i].date);
+    let expenses = JSON.parse(localStorage.getItem(user));
+    if (expenses != null){ //if not null, we have at least one expense
+        for (let i = 0; i < expenses.length; i++) {
+            addRow(expenses[i].name, expenses[i].category, expenses[i].value, expenses[i].date);
         }
     }
 </script>
