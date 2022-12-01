@@ -1,9 +1,8 @@
 let user = sessionStorage.getItem('username');
 // js to create a username icon with their name
 let ele = document.getElementById('corner');
-let node = document.createTextNode (user);
+let node = document.createTextNode("Hi, " + user + "!");
 ele.style.color = 'white';
-
 ele.prepend(node);
 
 // Backend to read database and populate table when page gets opened

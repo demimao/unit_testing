@@ -184,6 +184,23 @@
     z-index: 9;
   }
 
+  #logout {
+    width: 80px; 
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border-style: none;
+    outline: white;
+    outline-width: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    background-color: #27afd8;
+  }
+  #logout:hover { 
+    transform: scale(1.05);
+  }
+
 #imagesLine {
   position:relative;
   width: 1350px;
@@ -207,7 +224,7 @@
   bottom: 0px;
   width: fit-content;
   height: 40%;
-  }
+}
 #main-table #names {
   top: 20px;
   height: 40px;
