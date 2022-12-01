@@ -46,7 +46,7 @@ function store(){
             users.set(name.value, pw.value);
             localStorage.setItem('users', JSON.stringify(Array.from(users)))
             alert('Your account has been created');
-            history.back();
+            window.location.replace("../login_page/login_page.html")
         }
     }
 

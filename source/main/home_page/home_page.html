@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Frugal Dashboard</title>
     <link rel="stylesheet" href="home_page.css">
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
 </head>
 <body style="overflow-y: auto;">
     <div id = "line">
