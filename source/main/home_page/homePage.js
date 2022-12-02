@@ -27,7 +27,20 @@ function closeUpdate() {
 function openChart(){
     document.getElementById("breakdown").style.display = "block";
     var xValues = ["Needs", "Wants", "Savings"];
-    var yValues = [localStorage.getItem('Needs'), localStorage.getItem('Wants'), localStorage.getItem('Savings')];
+    let expenses = JSON.parse(localStorage.getItem(user));
+    let wants = 0;
+    let needs = 0;
+    let savings = 0;
+    for(let i = 0; i < expenses.length; i++){
+        if (expenses[i].category == 'Wants'){
+            wants += parseInt(expenses[i].value)
+        } else if (expenses[i].category == 'Needs'){
+            needs += parseInt(expenses[i].value)
+        } else if (expenses[i].category == 'Savings'){
+            savings += parseInt(expenses[i].value)
+        }
+    }
+    var yValues = [needs, wants, savings];
     var barColors = [
     "#b91d47",
     "#00aba9",
@@ -47,7 +60,14 @@ function openChart(){
         title: {
         display: true,
         text: "Expense Breakdown"
-        }
+        },
+        tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                return data['labels'][tooltipItem['index']] + ': $' + data['datasets'][0]['data'][tooltipItem['index']];
+              }
+            }
+          }
     }
     });
 }
@@ -65,20 +85,6 @@ document.querySelector("#adding").addEventListener("click", () => {
     let expenseCategory = document.getElementById("category").value;
     let expenseAmount = document.getElementById("amount").value;
     let expenseDate = document.getElementById("date").value;
-    
-    if (expenseCategory == 'Wants') {
-        let total = localStorage.getItem('Wants') ? parseInt(localStorage.getItem('Wants')) : 0;
-        total += parseInt(expenseAmount)
-        localStorage.setItem('Wants', total)
-    } else if (expenseCategory == 'Needs') {
-        let total = localStorage.getItem('Needs') ? parseInt(localStorage.getItem('Needs')) : 0;
-        total += parseInt(expenseAmount)
-        localStorage.setItem('Needs', total)
-    } else if (expenseCategory == 'Savings') {
-        let total = localStorage.getItem('Savings') ? parseInt(localStorage.getItem('Savings')) : 0;
-        total += parseInt(expenseAmount)
-        localStorage.setItem('Savings', total)
-    }
     
     addRow(expenseName,expenseCategory, expenseAmount, expenseDate);
     // Clear values in input boxes
@@ -176,25 +182,6 @@ function editRow(row){
         // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
         let oldExpenses = JSON.parse(localStorage.getItem(user))
         
-        //same category 
-        if(oldExpenses[row.rowIndex-1].category == document.getElementById("category_update").value){
-            let total = parseInt(localStorage.getItem(oldExpenses[row.rowIndex-1].category));
-            total -= parseInt(oldExpenses[row.rowIndex-1].value)
-            total += parseInt(document.getElementById("amount_update").value);
-            localStorage.setItem(oldExpenses[row.rowIndex-1].category, total)
-        } else{
-            oldCatTotal = parseInt(localStorage.getItem(oldExpenses[row.rowIndex-1].category));
-            oldCatTotal -= parseInt(oldExpenses[row.rowIndex-1].value)
-            if (oldCatTotal < 0) {
-                oldCatTotal = 0
-            }
-            localStorage.setItem(oldExpenses[row.rowIndex-1].category, oldCatTotal)
-            //buggy
-            newCatTotal = parseInt(localStorage.getItem(document.getElementById("category_update").value));
-            newCatTotal += parseInt(localStorage.getItem(document.getElementById("amount_update").value));
-            localStorage.setItem(document.getElementById("category_update").value, newCatTotal)
-        }
-
         oldExpenses[row.rowIndex-1].name = document.getElementById("name_update").value;
         oldExpenses[row.rowIndex-1].category = document.getElementById("category_update").value;
         oldExpenses[row.rowIndex-1].value = document.getElementById("amount_update").value;
@@ -217,10 +204,6 @@ function editRow(row){
     document.querySelector("#deleting").addEventListener("click", () => {
         // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
         let oldExpenses = JSON.parse(localStorage.getItem(user))
-
-        let total = parseInt(localStorage.getItem(oldExpenses[row.rowIndex-1].category));
-        total -= parseInt(oldExpenses[row.rowIndex-1].value)
-        localStorage.setItem(oldExpenses[row.rowIndex-1].category, total)
 
         oldExpenses.splice(row.rowIndex-1, 1);
 
