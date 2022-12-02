@@ -129,6 +129,11 @@
 </body>
 <script src="homePage.js"></script>
 <script>
+    if (user == 'null'){
+        alert("Unauthenticated User... Plz Login")
+        window.location.replace("../login_page/login_page.html")
+
+    }
     let expenses = JSON.parse(localStorage.getItem(user));
     if (expenses != null){ //if not null, we have at least one expense
         for (let i = 0; i < expenses.length; i++) {
