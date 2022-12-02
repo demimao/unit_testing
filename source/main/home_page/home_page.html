@@ -11,6 +11,9 @@
         setTimeout("preventBack()", 0);
         window.onunload = function () { null };
     </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 <body style="overflow-y: auto;">
     <div id = "line">
@@ -22,6 +25,7 @@
     </div>
     <br>
     <input type="image" src="../assets/images/add.png" width ='200 px' height = '40 px' name="saveForm"  id="add-row" alt="logo"/>
+    <input type="image" src="../assets/images/pie.png" width ='50 px' height = '50 px' name="openChart"  id="chart" alt="pie"/>
     <div id  = "search">
         <form action = "" class = "search-bar">
             <input type = "text" placeholder = "search " name = 'e'>
@@ -38,6 +42,13 @@
                 <option value="Savings"> Savings</option>
             </select> 
         </div> 
+    </div>
+
+    <div class="form-popup" id="breakdown">
+        <button id="chart-close" aria-label="Close alert" type="button" onclick="closeChart()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <canvas id="piechart" style="width:100%;max-width:800px"></canvas>
     </div>
 
     <div class="form-popup" id="expense">
@@ -68,7 +79,8 @@
           
         </form>
     </div>
-    
+
+
     <div class="form-popup" id="update">
         <form class="form-container">     
 					<button class="close-button" aria-label="Close alert" type="button" onclick="closeUpdate()">

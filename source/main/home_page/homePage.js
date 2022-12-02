@@ -24,6 +24,38 @@ function closeUpdate() {
     document.getElementById("update").style.display = "none";
 }
 
+function openChart(){
+    document.getElementById("breakdown").style.display = "block";
+    var xValues = ["Needs", "Wants", "Savings"];
+    var yValues = [localStorage.getItem('Needs'), localStorage.getItem('Wants'), localStorage.getItem('Savings')];
+    var barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    ];
+
+    new Chart("piechart", {
+    type: "doughnut",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Expense Breakdown"
+        }
+    }
+    });
+}
+
+function closeChart() {
+    document.getElementById("breakdown").style.display = "none";
+}
+
 //Adds a click listener to the add-row buttons
 
 //Adds a click listener to the add-row buttons where after add expense button is pressed, form is opened
@@ -31,10 +63,23 @@ document.querySelector("#adding").addEventListener("click", () => {
     // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
     let expenseName = document.getElementById("name").value;
     let expenseCategory = document.getElementById("category").value;
-    
-
     let expenseAmount = document.getElementById("amount").value;
     let expenseDate = document.getElementById("date").value;
+    
+    if (expenseCategory == 'Wants') {
+        let total = localStorage.getItem('Wants') ? parseInt(localStorage.getItem('Wants')) : 0;
+        total += parseInt(expenseAmount)
+        localStorage.setItem('Wants', total)
+    } else if (expenseCategory == 'Needs') {
+        let total = localStorage.getItem('Needs') ? parseInt(localStorage.getItem('Needs')) : 0;
+        total += parseInt(expenseAmount)
+        localStorage.setItem('Needs', total)
+    } else if (expenseCategory == 'Savings') {
+        let total = localStorage.getItem('Savings') ? parseInt(localStorage.getItem('Savings')) : 0;
+        total += parseInt(expenseAmount)
+        localStorage.setItem('Savings', total)
+    }
+    
     addRow(expenseName,expenseCategory, expenseAmount, expenseDate);
     // Clear values in input boxes
     document.getElementById("name").value = '';
@@ -48,6 +93,11 @@ document.querySelector("#adding").addEventListener("click", () => {
 document.querySelector("#add-row").addEventListener("click", () => {
     // Open form item
     openForm();
+});
+
+document.querySelector("#chart").addEventListener("click", () => {
+    // Open form item
+    openChart();
 });
     
 const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
@@ -125,13 +175,35 @@ function editRow(row){
     document.querySelector("#updating").addEventListener("click", () => {
         // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
         let oldExpenses = JSON.parse(localStorage.getItem(user))
-    
+        
+        //same category 
+        if(oldExpenses[row.rowIndex-1].category == document.getElementById("category_update").value){
+            let total = parseInt(localStorage.getItem(oldExpenses[row.rowIndex-1].category));
+            total -= parseInt(oldExpenses[row.rowIndex-1].value)
+            total += parseInt(document.getElementById("amount_update").value);
+            localStorage.setItem(oldExpenses[row.rowIndex-1].category, total)
+        } else{
+            oldCatTotal = parseInt(localStorage.getItem(oldExpenses[row.rowIndex-1].category));
+            oldCatTotal -= parseInt(oldExpenses[row.rowIndex-1].value)
+            if (oldCatTotal < 0) {
+                oldCatTotal = 0
+            }
+            localStorage.setItem(oldExpenses[row.rowIndex-1].category, oldCatTotal)
+            //buggy
+            newCatTotal = parseInt(localStorage.getItem(document.getElementById("category_update").value));
+            newCatTotal += parseInt(localStorage.getItem(document.getElementById("amount_update").value));
+            localStorage.setItem(document.getElementById("category_update").value, newCatTotal)
+        }
+
         oldExpenses[row.rowIndex-1].name = document.getElementById("name_update").value;
         oldExpenses[row.rowIndex-1].category = document.getElementById("category_update").value;
         oldExpenses[row.rowIndex-1].value = document.getElementById("amount_update").value;
         oldExpenses[row.rowIndex-1].date = document.getElementById("date_update").value;
 
+        
         localStorage.setItem(user, JSON.stringify(oldExpenses))
+
+        
 
         // Clear values in input boxes
         document.getElementById("name_update").value = '';
@@ -145,7 +217,11 @@ function editRow(row){
     document.querySelector("#deleting").addEventListener("click", () => {
         // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
         let oldExpenses = JSON.parse(localStorage.getItem(user))
-    
+
+        let total = parseInt(localStorage.getItem(oldExpenses[row.rowIndex-1].category));
+        total -= parseInt(oldExpenses[row.rowIndex-1].value)
+        localStorage.setItem(oldExpenses[row.rowIndex-1].category, total)
+
         oldExpenses.splice(row.rowIndex-1, 1);
 
         localStorage.setItem(user, JSON.stringify(oldExpenses))
