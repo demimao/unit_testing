@@ -11,8 +11,8 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(269.92deg, #0D5697 1.12%, #59A7EC 57.12%, #50b5c2 107.81%);
-    background-size: cover;
+    background: url("../assets/images/Main\ Page.png") bottom fixed;
+    background-size: relative;
     margin-right: 1%;
     margin-left: 1%;
     margin-top: 1%;
@@ -41,6 +41,10 @@
     padding-bottom: 2%;
     padding-left: 3%;
     padding-right: 3%;
+  }
+  
+  #chart{
+    transform: translateY(5px);
   }
   
   .chart-popup{
