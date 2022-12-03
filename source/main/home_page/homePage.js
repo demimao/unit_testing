@@ -5,8 +5,32 @@ let node = document.createTextNode("Hi, " + user + "!");
 ele.style.color = 'white';
 ele.prepend(node);
 
-// Backend to read database and populate table when page gets opened
 
+// Event listeneder for Filter()
+var a = document.getElementById('filter');
+a.addEventListener('change', function() {
+  editTable(a.value);
+}, false);
+// editTable gets called whenver our filter value changes (possible values: select your category, wants, needs, savings)
+
+function editTable(value){
+    entries = document.querySelector("#main-table").getElementsByTagName("td");
+    rows = document.querySelector("#main-table").getElementsByTagName("tr");
+    for(let i=1; i< rows.length; i++){
+        if(rows[i].getElementsByTagName('td')[1].innerHTML == value){
+            rows[i].style.display = 'table-row';
+        }
+        else {
+            if (value == "" ){
+                rows[i].style.display = 'table-row';
+            }
+            else{
+                rows[i].style.display = 'none';
+            }
+        }
+    }
+
+}
 
 finalValue = []
 
