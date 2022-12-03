@@ -5,10 +5,58 @@ let node = document.createTextNode("Hi, " + user + "!");
 ele.style.color = 'white';
 ele.prepend(node);
 
-var bar = document.querySelector('[name="e"]');
+var bar = document.querySelector('[name="e"]'); // type box for search
+var a = document.getElementById('filter'); // filter input
+
+// Event listener for search()
+
 bar.addEventListener('change', function() {
-    searching(bar.value);
+    let filter = document.getElementById('filter');
+    searchfilter(bar.value, filter.value);
+    
+
   }, false);
+
+
+
+// Event listener for Filter()
+a.addEventListener('change', function() {
+    let search = document.querySelector('[name="e"]');
+    searchfilter(search.value, a.value);
+}, false);
+/**
+ * 
+ * @param {*} searchVal 
+ * @param {*} filterVal 
+ * 
+ * Join function that gets fired when either search or filter is being used
+ * Takes both values of search and filter to searchfilter the html table
+ */
+function searchfilter(searchVal, filterVal){
+    rows = document.querySelector("#main-table").getElementsByTagName("tr");
+    for(let i=1; i< rows.length; i++){
+        rows[i].style.display = 'table-row';
+    }
+    for(let i=1; i< rows.length; i++){
+        if(rows[i].getElementsByTagName('td')[0].innerHTML.includes(searchVal)){
+            if(rows[i].getElementsByTagName('td')[1].innerHTML == filterVal){
+                rows[i].style.display = 'table-row';
+            } 
+            else if (filterVal == "" || filterVal == "All"){
+                rows[i].style.display = 'table-row';
+            }
+            else{
+                rows[i].style.display = 'none';
+            }
+
+        }
+        else {
+            rows[i].style.display = 'none';
+        }
+
+    }
+
+}
 function searching(val){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
     for(let i=1; i< rows.length; i++){
@@ -22,13 +70,10 @@ function searching(val){
         else {
                 rows[i].style.display = 'none';
         }
+        
     }
 }
-// Event listener for Filter()
-var a = document.getElementById('filter');
-a.addEventListener('change', function() {
-  editTable(a.value);
-}, false);
+
 // editTable gets called whenver our filter value changes (possible values: select your category, wants, needs, savings)
 
 function editTable(value){
