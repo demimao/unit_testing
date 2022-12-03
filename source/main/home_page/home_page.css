@@ -3,8 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-family: 'Montserrat';
   }
+
   body{
     margin: 0;
     padding: 0;
@@ -126,14 +128,14 @@
     cursor: pointer;
     padding: 5px;
     margin-left: 20px;
-    color:white;
+    color:rgb(249, 249, 249);
   }
-
+/*
   h2{
     text-align: left;
     font-size: 20px;
     color: #ffffff;
-  }
+  } */
 .heading {
     padding-left: 20px;
 }
@@ -165,7 +167,8 @@
     padding: 5px;
     margin: 0 auto;
     border-bottom: 1px solid white;
-    color: white;
+    font: weight 500px;
+    color: rgb(15, 34, 68);
     height: 40px;
     }
 
@@ -175,7 +178,7 @@
     border: none;
     padding: 5px 12px;
     margin: 10px 0;
-    background: #27afd8;
+    background: #368ca6;
     border-radius: 5px;
     width: 80%;
     color: white;
@@ -200,8 +203,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
+  background-color: rgb(128, 125, 125);
+  color: rgb(255, 255, 255);
   font-size: 16px;
   padding: 12px 24px;
   border: none;
@@ -309,7 +312,7 @@
     cursor: pointer;
     font-size: 15px;
     color: white;
-    background-color: #27afd8;
+    background-color: #34cdfb;
   }
   #logo-bottom{
     position: fixed;
@@ -351,32 +354,32 @@
   height: 40px;
   width:fit-content;
   color: #575F6E;
-  background: #D4D4D4;
+  background: #f5f4f4;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
 #main-table #categorys {
   color: #575F6E;
-  background: #D4D4D4;
+  background: #f5f4f4;
   width:fit-content;
 }  
 
 #main-table #dates {
   color: #575F6E;
-  background: #D4D4D4;
+  background: #f5f4f4;
   width:fit-content;
 
 }
 #main-table #amounts {
   color: #575F6E;
-  background: #D4D4D4;
+  background: #f5f4f4;
   width:fit-content;
 
 
 }
 #main-table #actions {
   color: #575F6E;
-  background: #D4D4D4;
+  background: #f5f4f4;
   width:fit-content;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;

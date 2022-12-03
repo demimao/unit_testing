@@ -89,9 +89,9 @@ function openChart(){
     }
     var yValues = [needs, wants, savings];
     var barColors = [
-    "#b91d47",
-    "#00aba9",
-    "#2b5797",
+      "#44B3F2",
+      "#8CC3C7",
+      "#2b5797",
     ];
 
     new Chart("piechart", {
@@ -179,11 +179,12 @@ const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
 
     let column5 = document.createElement("td");
     let btn = document.createElement("button");
-    btn.innerHTML = "Edit";
+    btn.innerHTML = "<img src=\"../assets/images/Vector.png\" width=\"4.5px\" height=\"20px\">";
     btn.type = "submit";
     btn.name = "formBtn";
     btn.id = 'btnn'
     btn.style =  'margin: 0;'
+    btn.style.background = 'transparent';
     btn.addEventListener("click", function () {
         editRow(row)
     });
