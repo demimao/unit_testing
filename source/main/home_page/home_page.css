@@ -266,6 +266,10 @@
   width: 100%;
 }
 
+.selections option{
+  color: black;
+}
+
 .sorting-search{
   border-top-style: hidden;
   border-right-style: hidden;
