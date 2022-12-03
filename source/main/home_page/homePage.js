@@ -21,7 +21,7 @@ function editTable(value){
             rows[i].style.display = 'table-row';
         }
         else {
-            if (value == "" ){
+            if (value == "" || value == "All"){
                 rows[i].style.display = 'table-row';
             }
             else{
