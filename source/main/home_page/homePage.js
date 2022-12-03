@@ -5,8 +5,22 @@ let node = document.createTextNode("Hi, " + user + "!");
 ele.style.color = 'white';
 ele.prepend(node);
 
-
-// Event listeneder for Filter()
+var bar = document.querySelector('[name="e"]');
+bar.addEventListener('change', function() {
+    searching(bar.value);
+  }, false);
+function searching(val){
+    rows = document.querySelector("#main-table").getElementsByTagName("tr");
+    for(let i=1; i< rows.length; i++){
+        if(rows[i].getElementsByTagName('td')[0].innerHTML.includes(val)){
+            rows[i].style.display = 'table-row';
+        }
+        else {
+                rows[i].style.display = 'none';
+        }
+    }
+}
+// Event listener for Filter()
 var a = document.getElementById('filter');
 a.addEventListener('change', function() {
   editTable(a.value);
@@ -14,7 +28,7 @@ a.addEventListener('change', function() {
 // editTable gets called whenver our filter value changes (possible values: select your category, wants, needs, savings)
 
 function editTable(value){
-    entries = document.querySelector("#main-table").getElementsByTagName("td");
+    //entries = document.querySelector("#main-table").getElementsByTagName("td");
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
     for(let i=1; i< rows.length; i++){
         if(rows[i].getElementsByTagName('td')[1].innerHTML == value){
