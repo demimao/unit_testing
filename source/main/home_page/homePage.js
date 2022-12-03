@@ -151,7 +151,7 @@ function openChart(){
     options: {
         title: {
         display: true,
-        text: "Expense Breakdown"
+        text: "Expense Breakdown" 
         },
         tooltips: {
             callbacks: {
@@ -244,7 +244,7 @@ const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
 
     let column5 = document.createElement("td");
     let btn = document.createElement("button");
-    btn.innerHTML = "<img src=\"../assets/images/Vector.png\" width=\"4.5px\" height=\"20px\">";
+    btn.innerHTML = "<img src=\"../assets/images/Vector.png\" width=\"4.5px\" height=\"17px\">";
     btn.type = "submit";
     btn.name = "formBtn";
     btn.id = 'btnn'
