@@ -127,7 +127,20 @@ function closeChart() {
     document.getElementById("breakdown").style.display = "none";
 }
 
-//Adds a click listener to the add-row buttons
+/**
+ * 
+ * @param {*} name 
+ * @param {*} category 
+ * @param {*} amount 
+ * @param {*} date 
+ * @returns True or false depending on if the input is valid (whether it exists)
+ */
+const validateInput = (name, category, amount, date) => {
+    if (name === "" || category === "" || amount === "" || date === "") {
+        return false
+    }
+    return true
+}
 
 //Adds a click listener to the add-row buttons where after add expense button is pressed, form is opened
 document.querySelector("#adding").addEventListener("click", () => {
@@ -136,6 +149,13 @@ document.querySelector("#adding").addEventListener("click", () => {
     let expenseCategory = document.getElementById("category").value;
     let expenseAmount = document.getElementById("amount").value;
     let expenseDate = document.getElementById("date").value;
+
+    // Check validity of input
+    if (validateInput(expenseName, expenseCategory, expenseAmount, expenseDate) === false){
+        alert('Please fill out all fields!');
+        closeForm();
+        return;
+    }
     
     addRow(expenseName,expenseCategory, expenseAmount, expenseDate);
     // Clear values in input boxes
@@ -230,8 +250,23 @@ function editRow(row){
     document.getElementById("amount_update").value = JSON.parse(localStorage.getItem(user))[row.rowIndex-1].value;
     document.getElementById("date_update").value = JSON.parse(localStorage.getItem(user))[row.rowIndex-1].date;
 
+
     document.querySelector("#updating").addEventListener("click", () => {
         // Add elements in the Backend (add to storage) and in front end(add new row to table) and then close form
+
+        let updatedName = document.getElementById("name_update").value;
+        let updatedCategory = document.getElementById("category_update").value;
+        let updatedAmount = document.getElementById("amount_update").value;
+        let updatedDate = document.getElementById("date_update").value;
+
+        // Check validity of input
+        if (validateInput(updatedName, updatedCategory, updatedAmount, updatedDate) === false) {
+            alert('Please fill out all fields!');
+            closeUpdate();
+            return;
+        }
+
+
         let oldExpenses = JSON.parse(localStorage.getItem(user))
         
         oldExpenses[row.rowIndex-1].name = document.getElementById("name_update").value;
