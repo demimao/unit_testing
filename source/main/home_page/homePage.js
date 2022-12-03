@@ -13,8 +13,9 @@ function searching(val){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
     for(let i=1; i< rows.length; i++){
         if(rows[i].getElementsByTagName('td')[0].innerHTML.includes(val)){
-            rows[i].style.display = 'table-row';
-        }
+            if(rows[i].style.display != 'none'){
+                rows[i].style.display = 'table-row';
+            }        }
         else {
                 rows[i].style.display = 'none';
         }
@@ -32,7 +33,9 @@ function editTable(value){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
     for(let i=1; i< rows.length; i++){
         if(rows[i].getElementsByTagName('td')[1].innerHTML == value){
-            rows[i].style.display = 'table-row';
+            if(rows[i].style.display != 'none'){
+                rows[i].style.display = 'table-row';
+            }
         }
         else {
             if (value == "" || value == "All"){
