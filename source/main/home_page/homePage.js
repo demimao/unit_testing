@@ -12,6 +12,9 @@ bar.addEventListener('change', function() {
 function searching(val){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
     for(let i=1; i< rows.length; i++){
+        rows[i].style.display = 'table-row';
+    }
+    for(let i=1; i< rows.length; i++){
         if(rows[i].getElementsByTagName('td')[0].innerHTML.includes(val)){
             if(rows[i].style.display != 'none'){
                 rows[i].style.display = 'table-row';
@@ -31,6 +34,9 @@ a.addEventListener('change', function() {
 function editTable(value){
     //entries = document.querySelector("#main-table").getElementsByTagName("td");
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
+    for(let i=1; i< rows.length; i++){
+        rows[i].style.display = 'table-row';
+    }
     for(let i=1; i< rows.length; i++){
         if(rows[i].getElementsByTagName('td')[1].innerHTML == value){
             if(rows[i].style.display != 'none'){
