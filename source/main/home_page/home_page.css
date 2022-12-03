@@ -47,6 +47,7 @@
   
   #chart{
     transform: translateY(5px);
+    margin-left: 15px;
   }
   
   .chart-popup{
@@ -156,20 +157,24 @@
     #main-table {
     width: 1200px;
     color: rgb(0, 0, 0);
-
     }
     #main-table th {
     padding: 5px;
     height: 20px;
     }
+    
     #main-table td {
     text-align: center;
     padding: 5px;
     margin: 0 auto;
-    border-bottom: 1px solid white;
     font: weight 500px;
-    color: rgb(15, 34, 68);
+    color: rgb(255, 255, 255);
     height: 40px;
+    }
+
+    #main-table tr:nth-child(odd) {
+      backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);
+      border-radius: 10px;
     }
 
     
