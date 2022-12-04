@@ -316,6 +316,6 @@ logout.addEventListener('click', logoutAction)
 function logoutAction() {
     // alert('logout button was clicked');
     event.preventDefault();
-    sessionStorage.removeItem(user);
+    sessionStorage.removeItem('username');
     window.location.replace("../login_page/login_page.html")
 }
