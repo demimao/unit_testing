@@ -1,4 +1,4 @@
-coverage
-dist
-.vscode
-.parcel-cache
+/source/electron/node_modules
+/source/electron/package-lock.json
+/.vscode
+node_modules
