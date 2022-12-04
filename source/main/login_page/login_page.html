@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frugal - The Simple Budgeting App</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="text/javascript">
+      function preventBack() { window.history.forward(); }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () { null };
+  </script>
+</head>
+<body>
+  <div class="imageLogin">
+    <img src="../assets/Logos/logo-dark.png" width= "100" height="100" alt="logo">
+  </div>
+  <h2>Welcome to Frugal</h2>
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post">
+      <div class="login_cred">
+        <input type="text" id="username" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="login_cred">
+        <input type="password" id="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="pass"> 
+        <a href="../reset_password/reset_password.html">  Forgot Password? </a>
+        <a href="../create_account/create_account.html" id="signup"> Signup </a> 
+      </div>
+      <input type="submit" value="Login" id="send">
+    </form>
+  </div>
+</body>
+  <script src="login.js"></script>
+</body>
+</html>

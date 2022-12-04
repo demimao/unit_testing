@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Frugal Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../assets/Logos/icon2.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="home_page.css">
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+<body style="overflow-y: auto;">
+    <div id = "line">
+        <img src="../assets/Logos/Logo (light).png" width= "75" height="75" alt="logo">
+        <h1> My Frugal Dashboard </h1>
+    </div>
+    <div id='corner'>
+        <button id="logout">Log Out</button>
+    </div>
+    <br>
+    <input type="image" src="../assets/images/add.png" width ='200 px' height = '40 px' name="saveForm"  id="add-row" alt="logo"/>
+    <input type="image" src="../assets/images/Group Pie.png" width ='50 px' height = '50 px' name="openChart" id="chart" alt="pie"/>
+    <div id  = "search">
+        <div class = "search-bar">
+            <input type = "text" placeholder = "Search " name = 'e'>
+            <img src = "../assets/images/Icon.png"  width ='30 px' height = '30 px' alt = "">
+        </div>
+       
+    </div>
+    <div class = "sorting">
+        <div class = "selections">
+             <select class ="sorting-search" name="sort-by-categories" id="filter">
+                <option value=""> Filter by category</option>
+                <option value="All">All</option>
+                <option value="Wants"> Wants</option>
+                <option value="Needs"> Needs</option>
+                <option value="Savings"> Savings</option>
+            </select> 
+        </div> 
+    </div>
+
+    <div class="form-popup" id="breakdown">
+        <button id="chart-close" aria-label="Close alert" type="button" onclick="closeChart()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <canvas id="piechart" style="width:100%;max-width:800px"></canvas>
+    </div>
+
+    <div class="form-popup" id="expense">
+        <form class="form-container">     
+					<button class="close-button" aria-label="Close alert" type="button" onclick="closeForm()">
+						<span aria-hidden="true">&times;</span>
+					</button>
+          <label for="expense"><b>Expense: </b></label>
+          <input type="text" id="name" placeholder="Item" size="20" style="height:25px;font-size:14pt;">
+
+          <label for="amount"><b>Value: </b></label>
+          <input type="number" id="amount" placeholder="Amount" size="20" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+
+          <label for="category"><b>Category:</b></label>
+          <select id="category" name="expensetype">
+            <option value="Wants">Wants</option>
+            <option value="Needs">Needs</option>
+            <option value="Savings">Savings</option>
+        	</select>
+
+          <label for=" date"><b>Date:</b></label>
+          <input type="date" id="date" placeholder="mm/dd/yyyy" size="20" style="height:25px;font-size:14pt;">
+
+					<div class="button-wrapper">
+						<button type="submit" class="addBtn" id="adding">Add Expense</button>
+					</div>
+          
+        </form>
+    </div>
+
+
+    <div class="form-popup" id="update">
+        <form class="form-container">     
+					<button class="close-button" aria-label="Close alert" type="button" onclick="closeUpdate()">
+						<span aria-hidden="true">&times;</span>
+					</button>
+          <label for="expense"><b>Expense: </b></label>
+          <input type="text" id="name_update" placeholder="Item" size="20" style="height:25px;font-size:14pt;">
+
+          <label for="amount"><b>Value: </b></label>
+          <input type="number" id="amount_update" placeholder="Amount" size="20" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
+          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+
+          <label for="category"><b>Category:</b></label>
+          <select id="category_update" name="expensetype">
+            <option value="Wants">Wants</option>
+            <option value="Needs">Needs</option>
+            <option value="Savings">Savings</option>
+        	</select>
+
+          <label for=" date"><b>Date:</b></label>
+          <input type="date" id="date_update" placeholder="mm/dd/yyyy" size="20" style="height:25px;font-size:14pt;">
+                    <div class="button-wrapper">
+                        <button type="submit" class="addBtn" id="updating">Update Expense</button>
+                        <button type="submit" class="delBtn" id="deleting">Delete</button>
+                    </div>
+          
+        </form>
+    </div> 
+
+      <div id="table-container">
+        <table id="main-table" cellspacing="0">
+        <tr>
+            <td id="names">Expense Name</td>
+            <td id="categorys">Category</td>
+            <td id="amounts">Amount</td>
+            <td id="dates">Date</td>
+            <td id="actions"></td>
+        </tr>
+        </table>
+    </div>
+    <!-- <div id = imagesLine>
+        <img src="../assets/images/Waves.png" id="bottom" alt="logo">
+        <img src="../assets/Logos/byte.png" id="logo-bottom" alt="logo"> 
+    </div> -->
+
+</body>
+<script src="homePage.js"></script>
+<script>
+    if (user == null){
+        alert("Unauthenticated User... Plz Login")
+        window.location.replace("../login_page/login_page.html")
+
+    }
+
+
+    let expenses = JSON.parse(localStorage.getItem(user));
+    if (expenses != null){ //if not null, we have at least one expense
+        for (let i = 0; i < expenses.length; i++) {
+            addRow(expenses[i].name, expenses[i].category, expenses[i].value, expenses[i].date);
+        }
+    }
+</script>
+</html>
