@@ -1,22 +1,12 @@
-name: Unit Tests
-
-on: [pull_request, push]
+name: CI - Unit Tests
+on: [push, pull_request]
 
 jobs:
-  tests:
+  Tests:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [18.x]
-    
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with: 
-          node-version: ${{ matrix.node-version }}
-      - name: Installation
-        run: npm install
-      - name: Jest Unit Tests
-        run: npm test
+      - name: Install Jest and additional plugins
+        run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
+      - name: Run Jest
+        run: npm run test
