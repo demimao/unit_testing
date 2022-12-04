@@ -1,12 +1,18 @@
-name: CI - Unit Tests
-on: [push, pull_request]
-
+name: Tests
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
 jobs:
-  Tests:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Jest and additional plugins
-        run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
-      - name: Run Jest
-        run: npm run test
+      - name: Install modules
+        run: npm install
+
+      - name: Run tests
+        run: npm test
