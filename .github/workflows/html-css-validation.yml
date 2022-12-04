@@ -1,11 +1,11 @@
 # This is a workflow to validate HTML and CSS files
-name: HTML/CSS-Validation
+name: HTML-CSS-EXP-Validation
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch and test branch (remove test branch name before PR)
+  # Triggers the workflow on push or pull request events but only for the "main" branch and testing branch (remove test branch name before PR)
   push:
-    branches: [ "main" , "testing-experimental-html-validator" ]
+    branches: [ "main" , "testing-experimental-html-validator"]
   pull_request:
     branches: [ "main" ]
 
@@ -24,13 +24,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: HTML5 Validator
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      - name: HTML5 Validator Experimental
+        uses: Cyb3r-Jak3/html5validator-action-experimental@v1.0.1
         with:
            root: .
            log_level: INFO
            css: true
-      - uses: actions/upload-artifact@v2
-        with:
-          name: log
-          path: log.log
+
